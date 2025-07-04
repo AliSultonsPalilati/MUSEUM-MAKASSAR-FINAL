@@ -9,8 +9,6 @@ Sebuah platform web interaktif yang dibangun untuk menjelajahi berbagai museum b
 ---
 
 ## 🚀 Fitur Utama
-
--   **Daftar Museum:** Menampilkan daftar lengkap museum di Makassar.
 -   **Halaman Detail:** Informasi mendalam tentang setiap museum, termasuk sejarah, koleksi unggulan, dan jam operasional.
 -   **Desain Responsif:** Tampilan yang optimal di berbagai perangkat, baik desktop maupun mobile.
 -   **Peta Lokasi:** Integrasi dengan peta untuk menunjukkan lokasi setiap museum.
