@@ -1,0 +1,52 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Home.css';
+import heroImage from '../assets/hero-image.jpg'; // Pastikan path gambar ini benar
+
+function Home() {
+  return (
+    <div className="home-container">
+      <header className="hero-section" style={{ backgroundImage: `url(${heroImage})` }}>
+        <div className="hero-overlay">
+          <div className="hero-content">
+            <h1>Selamat Datang di Museum Makassar</h1>
+            <p>Menjelajahi Kekayaan Sejarah dan Budaya Kota Daeng</p>
+            <Link to="/koleksi" className="hero-button">Lihat Koleksi Museum</Link>
+          </div>
+        </div>
+      </header>
+
+      <section className="video-section">
+        <div className="container">
+          <h2>Sekilas Tentang Museum of Makassar</h2>
+          <p>Saksikan perjalanan singkat mengenai kekayaan koleksi dan sejarah yang di jelaskan oleh kelompok 6 - Pemrograman Multimedia.</p>
+          <div className="video-wrapper">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/sPp18MsOg_c?si=ijSY9IaV58MRpsrX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section className="features-section">
+        <div className="container">
+          <h2>Mengapa Berkunjung?</h2>
+          <div className="features-grid">
+            <div className="feature-item">
+              <h3>Koleksi Autentik</h3>
+              <p>Lihat ribuan artefak bersejarah dari berbagai era.</p>
+            </div>
+            <div className="feature-item">
+              <h3>Edukasi & Sejarah</h3>
+              <p>Pelajari lebih dalam tentang warisan budaya Makassar.</p>
+            </div>
+            <div className="feature-item">
+              <h3>Acara Menarik</h3>
+              <p>Ikuti pameran dan agenda spesial yang kami adakan.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default Home;

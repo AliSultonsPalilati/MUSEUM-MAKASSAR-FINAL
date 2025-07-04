@@ -1,0 +1,103 @@
+.info-page {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.info-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.info-header h1 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.info-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.info-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.info-map h3,
+.info-details h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.6rem;
+  color: #8B4513; /* Coklat */
+  margin-bottom: 1rem;
+}
+
+.info-map p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  line-height: 0; /* Menghilangkan spasi bawah iframe */
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.info-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.info-card ul li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.info-card li.closed {
+    color: #c0392b; /* Merah */
+    font-weight: 600;
+}
+
+.rules-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-check {
+    color: #27ae60; /* Hijau */
+}
+
+.icon-cross {
+    color: #c0392b; /* Merah */
+}
+
+
+/* Responsif untuk layar kecil */
+@media (max-width: 992px) {
+  .info-layout {
+    grid-template-columns: 1fr;
+  }
+}
