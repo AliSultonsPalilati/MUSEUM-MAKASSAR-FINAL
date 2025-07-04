@@ -18,7 +18,7 @@ Sebuah platform web interaktif yang dibangun untuk menjelajahi berbagai museum b
 -   **Frontend:** [React.js](https://reactjs.org/)
 -   **Build Tool:** [Vite](https://vitejs.dev/)
 -   **Bahasa:** JavaScript
--   **Styling:** CSS3 / (Sebutkan jika Anda pakai framework lain seperti Tailwind CSS atau Bootstrap)
+-   **Styling:** CSS3
 -   **Deployment:** [GitHub Pages](https://pages.github.com/)
 
 ## 💻 Instalasi dan Penggunaan Lokal
