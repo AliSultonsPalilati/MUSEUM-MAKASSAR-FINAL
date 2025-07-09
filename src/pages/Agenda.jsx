@@ -4,7 +4,7 @@ import { FaCalendarAlt, FaRegNewspaper } from "react-icons/fa";
 
 // Import gambar untuk agenda & berita
 import imgWorkshop from '../assets/agenda/workshop-lontara.jpg';
-import imgKunjungan from '../assets/agenda/kunjungan.jpg';
+import imgKunjungan from '../assets/agenda/kunjungan-mahasiswa.jpg';
 import imgTur from '../assets/agenda/tur-museum.jpg';
 
 export default function Agenda() {
