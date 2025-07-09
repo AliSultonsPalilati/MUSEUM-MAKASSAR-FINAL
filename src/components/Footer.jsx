@@ -6,7 +6,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container container">
         <div className="footer-about">
-          <h3>Museum Makassar</h3>
+          <h4>Museum Kota Makassar</h4>
           <p>
             Jl. Jenderal Sudirman No. 1, Makassar, Sulawesi Selatan. <br />
             Sebuah tempat untuk melestarikan dan menampilkan warisan budaya.

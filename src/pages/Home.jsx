@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import heroImage from '../assets/hero-image.jpg'; // Pastikan path gambar ini benar
+import heroImage from '../assets/tampilan-utama.jpg'; // Pastikan path gambar ini benar
 
 function Home() {
   return (
@@ -9,10 +9,10 @@ function Home() {
       <header className="hero-section" style={{ backgroundImage: `url(${heroImage})` }}>
         <div className="hero-overlay">
           <div className="hero-content">
-            <h1>Selamat Datang di Museum Makassar</h1>
+            <h1>Selamat Datang di Museum Kota Makassar</h1>
             <p>Menjelajahi Kekayaan Sejarah dan Budaya Kota Daeng</p>
             <Link to="/koleksi" className="hero-button">Lihat Koleksi Museum</Link>
-          </div>
+          </div>  
         </div>
       </header>
 
@@ -21,7 +21,7 @@ function Home() {
           <h2>Sekilas Tentang Museum of Makassar</h2>
           <p>Saksikan perjalanan singkat mengenai kekayaan koleksi dan sejarah yang di jelaskan oleh kelompok 6 - Pemrograman Multimedia.</p>
           <div className="video-wrapper">
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/sPp18MsOg_c?si=ijSY9IaV58MRpsrX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/Cyb1clOmDKo?si=YgCBLSbDdIajvOA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
       </section>
@@ -40,7 +40,7 @@ function Home() {
             </div>
             <div className="feature-item">
               <h3>Acara Menarik</h3>
-              <p>Ikuti pameran dan agenda spesial yang kami adakan.</p>
+              <p>Ikuti Instagram @museumkotamakassar untuk melihat acara menarik.</p>
             </div>
           </div>
         </div>

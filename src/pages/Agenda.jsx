@@ -4,7 +4,7 @@ import { FaCalendarAlt, FaRegNewspaper } from "react-icons/fa";
 
 // Import gambar untuk agenda & berita
 import imgWorkshop from '../assets/agenda/workshop-lontara.jpg';
-import imgKunjungan from '../assets/agenda/kunjungan-mahasiswa.jpg';
+import imgKunjungan from '../assets/agenda/kunjungan.jpg';
 import imgTur from '../assets/agenda/tur-museum.jpg';
 
 export default function Agenda() {
@@ -54,9 +54,13 @@ export default function Agenda() {
             <img src={imgKunjungan} alt="Kunjungan dari Unismuh Makassar" className="agenda-card-img" />
             <div className="agenda-card-body">
               <p className="agenda-card-date">28 Juni 2025</p>
-              <h3>Kunjungan Studi dari Unismuh Makassar</h3>
+              <h3>Kunjungan Studi dari Unismuh Makassar - Kelompok 6</h3>
               <p className="agenda-card-text">
-                Ratusan mahasiswa dari Fakultas Sastra melakukan studi lapangan untuk mendalami sejarah dan budaya lokal yang tersimpan di museum.
+                Sebuah kolaborasi menarik antara mahasiswa Teknik Informatika Unismuh Makassar dan Museum Kota Makassar! 
+                Kelompok 6 melakukan kunjungan studi khusus untuk menciptakan konten video promosi yang akan memperkenalkan 
+                keindahan dan kekayaan koleksi museum kepada masyarakat luas. Dengan keahlian teknologi dan kreativitas digital, 
+                mereka mendokumentasikan setiap sudut bersejarah dan artefak berharga untuk dikemas dalam 
+                storytelling yang menarik dan mudah diakses melalui platform digital.
               </p>
               <a href="#" className="agenda-card-button">Baca Selengkapnya</a>
             </div>

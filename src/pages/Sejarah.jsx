@@ -4,7 +4,7 @@ import { FaLandmark, FaPencilRuler, FaRegCalendarAlt } from 'react-icons/fa';
 
 // Import gambar-gambar
 import imgLama from '../assets/sejarah/gedung-lama.jpg';
-import imgSekarang from '../assets/sejarah/gedung-sekarang.jpg';
+import imgSekarang from '../assets/tampilan-utama.jpg';
 import imgDetail from '../assets/sejarah/detail-arsitektur.jpg';
 
 export default function Sejarah() {
@@ -21,10 +21,10 @@ export default function Sejarah() {
         <div className="sejarah-narrative">
           <h2>Dari Stadhuis Menjadi Museum</h2>
           <p>
-            Gedung yang kini Anda kenal sebagai Museum Kota Makassar awalnya adalah **Stadhuis atau Balai Kota** pada masa pemerintahan Hindia Belanda. Pembangunannya dimulai pada tahun **1916** dan dirancang oleh seorang arsitek Belanda, **G.O. Appell**.
+            Gedung yang kini Anda kenal sebagai Museum Kota Makassar awalnya adalah Stadhuis atau Balai Kota pada masa pemerintahan Hindia Belanda. Pembangunannya dimulai pada tahun 1916 dan dirancang oleh seorang arsitek Belanda, G.O. Appell.
           </p>
           <p>
-            Dengan gaya arsitektur **Neoklasik Eropa** yang kental, gedung ini menjadi saksi bisu berbagai peristiwa penting di Makassar. Setelah kemerdekaan, fungsinya tetap sebagai kantor Walikota hingga tahun 1999. Menyadari nilai historisnya yang tinggi, Pemerintah Kota kemudian merevitalisasi gedung ini. Tepat pada tanggal **14 Mei 2000**, gedung ini diresmikan sebagai Museum Kota Makassar untuk melestarikan dan memamerkan sejarah serta budaya kota.
+            Dengan gaya arsitektur Neoklasik Eropa yang kental, gedung ini menjadi saksi bisu berbagai peristiwa penting di Makassar. Setelah kemerdekaan, fungsinya tetap sebagai kantor Walikota hingga tahun 1999. Menyadari nilai historisnya yang tinggi, Pemerintah Kota kemudian merevitalisasi gedung ini. Tepat pada tanggal 14 Mei 2000, gedung ini diresmikan sebagai Museum Kota Makassar untuk melestarikan dan memamerkan sejarah serta budaya kota.
           </p>
         </div>
         <div className="sejarah-facts">
