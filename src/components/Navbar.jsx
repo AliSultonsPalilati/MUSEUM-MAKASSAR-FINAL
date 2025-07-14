@@ -3,15 +3,10 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [click, setClick] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
+  const handleClick = () => setClick(!click);
+  const closeMenu = () => setClick(false);
 
   return (
     <nav className="navbar">
@@ -20,12 +15,11 @@ function Navbar() {
           Museum Makassar
         </Link>
 
-        {/* Hamburger icon */}
-        <div className="menu-toggle" onClick={toggleMenu}>
+        <div className="menu-icon" onClick={handleClick}>
           ☰
         </div>
 
-        <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
             <Link to="/" className="nav-links" onClick={closeMenu}>Beranda</Link>
           </li>
@@ -48,3 +42,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
