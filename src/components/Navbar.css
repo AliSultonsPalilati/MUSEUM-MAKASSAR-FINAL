@@ -1,59 +1,43 @@
-.navbar {
-  background: #FFFFFF;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  height: 80px;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 24px;
-}
-
-.navbar-logo {
-  color: #8B4513;
-  justify-self: start;
-  cursor: pointer;
-  text-decoration: none;
+/* Tambahan untuk menu toggle (hamburger icon) */
+.menu-toggle {
+  display: none;
   font-size: 2rem;
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  text-align: center;
-}
-
-.nav-item {
-  height: 80px;
-}
-
-.nav-links {
-  color: #333;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
 }
 
-.nav-links:hover {
-  color: #8B4513;
-  border-bottom: 3px solid #8B4513;
+/* Responsif untuk mobile */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    height: auto;
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .nav-links:hover {
+    background: #f1f1f1;
+    border-bottom: none;
+  }
 }
