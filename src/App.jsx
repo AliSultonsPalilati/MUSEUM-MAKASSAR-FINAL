@@ -4,7 +4,7 @@ import Sejarah from './pages/Sejarah'
 import Koleksi from './pages/Koleksi'
 import Info from './pages/Info'
 import Agenda from './pages/Agenda'
-import Navbar from './components/navbar'
+import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 export default function App() {
