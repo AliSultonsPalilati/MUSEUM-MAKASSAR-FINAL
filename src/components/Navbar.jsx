@@ -16,24 +16,35 @@ function Navbar() {
         </Link>
 
         <div className="menu-icon" onClick={handleClick}>
-          ☰
+          {/* Menggunakan ikon yang lebih umum dan jelas */}
+          {click ? '✕' : '☰'}
         </div>
 
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={closeMenu}>Beranda</Link>
+            <Link to="/" className="nav-links" onClick={closeMenu}>
+              Beranda
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/sejarah" className="nav-links" onClick={closeMenu}>Sejarah</Link>
+            <Link to="/sejarah" className="nav-links" onClick={closeMenu}>
+              Sejarah
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/koleksi" className="nav-links" onClick={closeMenu}>Koleksi</Link>
+            <Link to="/koleksi" className="nav-links" onClick={closeMenu}>
+              Koleksi
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/info" className="nav-links" onClick={closeMenu}>Info</Link>
+            <Link to="/info" className="nav-links" onClick={closeMenu}>
+              Info
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/agenda" className="nav-links" onClick={closeMenu}>Agenda</Link>
+            <Link to="/agenda" className="nav-links" onClick={closeMenu}>
+              Agenda
+            </Link>
           </li>
         </ul>
       </div>
@@ -42,4 +53,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

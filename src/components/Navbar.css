@@ -1,14 +1,16 @@
+/* Base Styles for Navbar */
 .navbar {
   background: #FFFFFF;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem; /* Sedikit disesuaikan untuk base */
   position: sticky;
   top: 0;
   z-index: 999;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .navbar-container {
@@ -17,8 +19,8 @@
   align-items: center;
   height: 80px;
   width: 100%;
-  max-width: 1200px;
-  padding: 0 24px;
+  max-width: 1300px; /* Sedikit lebih lebar untuk layar besar */
+  padding: 0 30px; /* Padding dasar */
 }
 
 .navbar-logo {
@@ -26,6 +28,7 @@
   text-decoration: none;
   font-size: 2rem;
   font-weight: 700;
+  flex-shrink: 0; /* Mencegah logo mengecil */
 }
 
 .nav-menu {
@@ -33,10 +36,14 @@
   align-items: center;
   list-style: none;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-item {
   height: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
@@ -48,6 +55,7 @@
   height: 100%;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  border-bottom: 3px solid transparent; /* Border transparan untuk hover */
 }
 
 .nav-links:hover {
@@ -55,38 +63,47 @@
   border-bottom: 3px solid #8B4513;
 }
 
-/* MENU ICON (hamburger) */
+/* Menu Icon (Hamburger) */
 .menu-icon {
-  display: none;
+  display: none; /* Sembunyikan di desktop */
   font-size: 1.8rem;
   cursor: pointer;
   color: #333;
 }
 
-/* RESPONSIVE */
-@media screen and (max-width: 768px) {
-  .menu-icon {
-    display: block;
+/* RESPONSIVE DESIGN */
+
+/* Untuk Tablet */
+@media screen and (max-width: 992px) {
+  .navbar-container {
+    padding: 0 20px; /* Kurangi padding untuk tablet */
   }
 
   .nav-menu {
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: -100%;
-    width: 100%;
-    background: #FFFFFF;
-    transition: left 0.3s ease;
-    padding: 0;
-    margin: 0;
+    display: none; /* Sembunyikan menu desktop */
   }
 
   .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
     left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    transition: all 0.4s ease-in-out;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-icon {
+    display: block; /* Tampilkan ikon hamburger */
   }
 
   .nav-item {
     width: 100%;
+    height: auto;
   }
 
   .nav-links {
@@ -94,11 +111,28 @@
     width: 100%;
     display: block;
     text-align: center;
+    border-bottom: none; /* Hapus border bawah */
   }
 
   .nav-links:hover {
-    background-color: #f1f1f1;
+    background-color: #f4f4f4;
     color: #8B4513;
-    border: none;
+    border-bottom: none; /* Pastikan tidak ada border saat hover */
+  }
+}
+
+/* Untuk Mobile */
+@media screen and (max-width: 768px) {
+  .navbar-logo {
+    font-size: 1.5rem; /* Perkecil ukuran logo di mobile */
+  }
+
+  .menu-icon {
+    font-size: 1.5rem; /* Perkecil ikon menu */
+  }
+  
+  .nav-links {
+    padding: 1.2rem; /* Sesuaikan padding link di mobile */
+    font-size: 1rem;
   }
 }

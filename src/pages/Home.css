@@ -1,7 +1,15 @@
+/* Styling dasar */
 .home-container {
   width: 100%;
 }
 
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
 .hero-section {
   height: 80vh;
   width: 100%;
@@ -34,87 +42,69 @@
 .hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .hero-content p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  font-weight: 400;
 }
 
 .hero-button {
   padding: 12px 24px;
   font-size: 1.2rem;
-  background-color: #8B4513;
+  background-color: #8B4513; /* SaddleBrown */
   color: white;
   border: none;
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .hero-button:hover {
-  background-color: #A0522D;
+  background-color: #A0522D; /* Sienna */
+  transform: translateY(-2px);
 }
 
+/* Section Umum */
+.video-section,
 .features-section {
   padding: 4rem 0;
-  background-color: #FFFFFF;
   text-align: center;
 }
 
-.features-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #333;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.feature-item {
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.video-section {
   background-color: #f9f9f9;
 }
 
-.feature-item h3 {
-  color: #8B4513;
-  margin-bottom: 1rem;
+.features-section {
+  background-color: #FFFFFF;
 }
 
-/* === Tambahan untuk Bagian Video === */
-
-.video-section {
-  padding: 4rem 0;
-  background-color: #ffffff; /* Warna latar belakang bisa disesuaikan */
-  text-align: center;
-}
-
-.video-section h2 {
+.video-section h2,
+.features-section h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: #333;
 }
 
 .video-section p {
   font-size: 1.1rem;
   color: #666;
-  max-width: 600px;
-  margin: 0 auto 2.5rem auto; /* Memberi jarak bawah ke video */
+  max-width: 700px;
+  line-height: 1.6;
+  margin: 0 auto 2.5rem auto;
 }
 
-/* Trik untuk membuat iframe responsif (aspek rasio 16:9) */
+/* Video Wrapper */
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
   height: 0;
   overflow: hidden;
-  max-width: 1000px; /* Lebar maksimal video */
+  max-width: 1000px;
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
@@ -126,4 +116,100 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-item {
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.feature-item h3 {
+  color: #8B4513;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.feature-item p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+/* === Media Queries untuk Responsivitas === */
+
+/* Tablet (lebar < 992px) */
+@media screen and (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.3rem;
+  }
+  
+  .video-section h2,
+  .features-section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile (lebar < 768px) */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    height: 70vh; /* Sedikit lebih pendek di mobile */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* Ukuran font lebih kecil untuk mobile */
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
+  .video-section,
+  .features-section {
+    padding: 3rem 0; /* Kurangi padding section */
+  }
+
+  .video-section h2,
+  .features-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .video-section p {
+    font-size: 1rem;
+  }
+
+  .features-grid {
+    gap: 1.5rem;
+  }
+
+  .feature-item {
+    padding: 1.5rem;
+  }
 }

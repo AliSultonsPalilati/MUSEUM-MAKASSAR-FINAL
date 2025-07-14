@@ -12,39 +12,50 @@ function Home() {
             <h1>Selamat Datang di Museum Kota Makassar</h1>
             <p>Menjelajahi Kekayaan Sejarah dan Budaya Kota Daeng</p>
             <Link to="/koleksi" className="hero-button">Lihat Koleksi Museum</Link>
-          </div>  
+          </div>
         </div>
       </header>
 
-      <section className="video-section">
-        <div className="container">
-          <h2>Sekilas Tentang Museum of Makassar</h2>
-          <p>Saksikan perjalanan singkat mengenai kekayaan koleksi dan sejarah yang di jelaskan oleh kelompok 6 - Pemrograman Multimedia.</p>
-          <div className="video-wrapper">
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/Cyb1clOmDKo?si=YgCBLSbDdIajvOA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <main>
+        <section className="video-section">
+          <div className="container">
+            <h2>Sekilas Tentang Museum of Makassar</h2>
+            <p>Saksikan perjalanan singkat mengenai kekayaan koleksi dan sejarah yang dijelaskan oleh Kelompok 6 - Pemrograman Multimedia.</p>
+            <div className="video-wrapper">
+              <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/Cyb1clOmDKo?si=YgCBLSbDdIajvOA0" 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen>
+              </iframe>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="features-section">
-        <div className="container">
-          <h2>Mengapa Berkunjung?</h2>
-          <div className="features-grid">
-            <div className="feature-item">
-              <h3>Koleksi Autentik</h3>
-              <p>Lihat ribuan artefak bersejarah dari berbagai era.</p>
-            </div>
-            <div className="feature-item">
-              <h3>Edukasi & Sejarah</h3>
-              <p>Pelajari lebih dalam tentang warisan budaya Makassar.</p>
-            </div>
-            <div className="feature-item">
-              <h3>Acara Menarik</h3>
-              <p>Ikuti Instagram @museumkotamakassar untuk melihat acara menarik.</p>
+        <section className="features-section">
+          <div className="container">
+            <h2>Mengapa Berkunjung?</h2>
+            <div className="features-grid">
+              <div className="feature-item">
+                <h3>Koleksi Autentik</h3>
+                <p>Lihat ribuan artefak bersejarah dari berbagai era.</p>
+              </div>
+              <div className="feature-item">
+                <h3>Edukasi & Sejarah</h3>
+                <p>Pelajari lebih dalam tentang warisan budaya Makassar.</p>
+              </div>
+              <div className="feature-item">
+                <h3>Acara Menarik</h3>
+                <p>Ikuti Instagram @museumkotamakassar untuk melihat acara menarik.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </div>
   );
 }
