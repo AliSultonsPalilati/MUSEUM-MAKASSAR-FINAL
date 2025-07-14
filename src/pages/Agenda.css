@@ -1,6 +1,8 @@
-.agenda-page {
+/* Menggunakan class .container dari file CSS global/Home.css untuk konsistensi */
+.agenda-page.container {
   padding-top: 40px;
   padding-bottom: 60px;
+  max-width: 1200px;
 }
 
 .agenda-header {
@@ -9,7 +11,8 @@
 }
 
 .agenda-header h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
+  font-weight: 700;
   color: #333;
   margin-bottom: 10px;
 }
@@ -19,6 +22,7 @@
   color: #666;
   max-width: 700px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
 .upcoming-section h2,
@@ -29,7 +33,7 @@
   font-size: 2.2rem;
   color: #333;
   margin-bottom: 2rem;
-  border-bottom: 3px solid #8B4513;
+  border-bottom: 3px solid #8B4513; /* SaddleBrown */
   padding-bottom: 10px;
 }
 
@@ -40,24 +44,16 @@
   margin: 4rem 0;
 }
 
-.upcoming-grid, .news-grid {
+/* Menggunakan satu class grid untuk konsistensi */
+.agenda-grid {
   display: grid;
-  gap: 2rem;
-}
-
-/* Grid untuk agenda terdekat (2 kolom di layar besar) */
-.upcoming-grid {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-}
-
-/* Grid untuk berita (3 kolom di layar besar) */
-.news-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
 }
 
 .agenda-card {
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   display: flex;
@@ -77,32 +73,33 @@
 }
 
 .agenda-card-body {
-  padding: 20px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Membuat body kartu mengisi ruang tersisa */
+  flex-grow: 1;
 }
 
 .agenda-card-date {
   font-size: 0.85rem;
-  font-weight: 600;
-  color: #8B4513; /* Coklat */
+  font-weight: 700;
+  color: #8B4513;
   margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 .agenda-card-body h3 {
   font-size: 1.4rem;
   color: #333;
   margin-top: 0;
-  margin-bottom: 10px;
-  line-height: 1.3;
+  margin-bottom: 15px;
+  line-height: 1.4;
 }
 
 .agenda-card-text {
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #555;
-  flex-grow: 1; /* Mendorong tombol ke bawah */
+  flex-grow: 1;
   margin-bottom: 1.5rem;
 }
 
@@ -110,15 +107,48 @@
   display: inline-block;
   background-color: #8B4513;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
   text-align: center;
-  margin-top: auto; /* Mendorong tombol ke bagian bawah kartu */
+  margin-top: auto;
   transition: background-color 0.3s ease;
 }
 
 .agenda-card-button:hover {
-  background-color: #A0522D;
+  background-color: #A0522D; /* Sienna */
+}
+
+
+/* === Media Queries untuk Responsivitas === */
+@media screen and (max-width: 992px) {
+  .agenda-header h1 {
+    font-size: 2.5rem;
+  }
+  .upcoming-section h2,
+  .news-section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .agenda-page.container {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .agenda-header h1 {
+    font-size: 2.1rem;
+  }
+  .agenda-header p {
+    font-size: 1rem;
+  }
+  .upcoming-section h2,
+  .news-section h2 {
+    font-size: 1.8rem;
+  }
+  .agenda-grid {
+    grid-template-columns: 1fr; /* Satu kolom untuk mobile */
+    gap: 2rem;
+  }
 }

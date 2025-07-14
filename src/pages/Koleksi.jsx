@@ -1,5 +1,6 @@
 import React from "react";
-import "./Koleksi.css"; // Import file CSS
+import { Link } from 'react-router-dom'; // <-- Import Link
+import "./Koleksi.css"; 
 
 // Import gambar untuk setiap kartu koleksi
 import imgArkeologi from "../assets/koleksi/arkeologi.jpg";
@@ -10,16 +11,15 @@ import imgPameran from "../assets/koleksi/pameran.jpg";
 import imgBadik from "../assets/koleksi/badik.jpg";
 import imgKeramik from "../assets/koleksi/keramik.jpg";
 
-
 export default function Koleksi() {
   return (
     <div className="koleksi-page container">
-      <div className="koleksi-header">
+      <header className="koleksi-header">
         <h1>Koleksi & Pameran</h1>
         <p>
           Jelajahi kekayaan artefak dan warisan budaya yang disimpan di museum.
         </p>
-      </div>
+      </header>
 
       <div className="koleksi-grid">
         {/* Kartu 1: Arkeologi */}
@@ -83,9 +83,9 @@ export default function Koleksi() {
         <div className="koleksi-card">
           <img src={imgBadik} alt="Koleksi Badik" className="card-image" />
           <div className="card-content">
-            <h3>Badik - Senjata Tradisional Makassar</h3>
+            <h3>Badik - Senjata Tradisional</h3>
             <p>
-              Badik tradisional Makassar, simbol kehormatan dan pertahanan diri masyarakat Bugis-Makassar sejak dahulu.
+              Simbol kehormatan dan pertahanan diri masyarakat Bugis-Makassar sejak dahulu.
             </p>
           </div>
         </div>
@@ -96,27 +96,25 @@ export default function Koleksi() {
           <div className="card-content">
             <h3>Koleksi Keramik Abad 16–17</h3>
             <p>
-              Keramik abad 16–17 peninggalan perdagangan maritim, bukti hubungan dagang Makassar dan Asia.
+              Keramik kuno bukti hubungan dagang maritim antara Makassar dengan bangsa Asia lainnya.
             </p>
           </div>
         </div>
       </div>
 
       {/* Section Koleksi Lainnya */}
-      <div className="koleksi-more-section">
+      <section className="koleksi-more-section">
         <div className="more-content">
           <div className="more-icon">
             <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#8B5A2B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M2 17L12 22L22 17" stroke="#8B5A2B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M2 12L12 17L22 12" stroke="#8B5A2B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#8B4513" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M2 17L12 22L22 17" stroke="#8B4513" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M2 12L12 17L22 12" stroke="#8B4513" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-          <h3>Koleksi Lainnya</h3>
+          <h3>Dan Masih Banyak Lagi</h3>
           <p>
-            Dan masih banyak lagi koleksi menarik yang tersimpan di museum ini. Mulai dari naskah kuno, 
-            pakaian tradisional, peralatan rumah tangga tempo dulu, hingga dokumentasi sejarah langka 
-            yang menceritakan perjalanan panjang Kota Makassar.
+            Museum ini menyimpan ratusan koleksi lain, mulai dari naskah kuno, pakaian tradisional, hingga dokumentasi sejarah langka yang menceritakan perjalanan panjang Kota Makassar.
           </p>
           <div className="more-stats">
             <div className="stat-item">
@@ -132,13 +130,13 @@ export default function Koleksi() {
               <span className="stat-label">Tahun Sejarah</span>
             </div>
           </div>
-          <a href="/koleksi-lengkap" className="more-button">
+          <Link to="/koleksi" className="more-button">
             Jelajahi Semua Koleksi
-          </a>
+          </Link>
         </div>
-      </div>
+      </section>
 
-      <div className="pameran-section">
+      <section className="pameran-section">
         <div className="pameran-image">
           <img src={imgPameran} alt="Pameran Fotografi" />
         </div>
@@ -150,11 +148,11 @@ export default function Koleksi() {
             suasana Kota Makassar di masa lalu. Pameran ini berlangsung hingga
             akhir tahun. Jangan lewatkan!
           </p>
-          <a href="/agenda" className="pameran-button">
+          <Link to="/agenda" className="pameran-button">
             Lihat Jadwal Agenda
-          </a>
+          </Link>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

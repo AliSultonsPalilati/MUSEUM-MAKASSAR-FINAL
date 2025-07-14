@@ -1,5 +1,5 @@
 import React from 'react';
-import './Sejarah.css'; // <-- Import file CSS baru
+import './Sejarah.css'; 
 import { FaLandmark, FaPencilRuler, FaRegCalendarAlt } from 'react-icons/fa';
 
 // Import gambar-gambar
@@ -10,14 +10,14 @@ import imgDetail from '../assets/sejarah/detail-arsitektur.jpg';
 export default function Sejarah() {
   return (
     <div className="sejarah-page container">
-      <div className="sejarah-hero">
-        <div className="hero-text">
+      <header className="sejarah-hero">
+        <div className="hero-text-overlay">
           <h1>Jejak Waktu di Jantung Kota</h1>
           <p>Kisah sebuah gedung ikonik yang bertransformasi dari pusat pemerintahan menjadi penjaga warisan budaya Makassar.</p>
         </div>
-      </div>
+      </header>
 
-      <div className="sejarah-content-layout">
+      <section className="sejarah-content-layout">
         <div className="sejarah-narrative">
           <h2>Dari Stadhuis Menjadi Museum</h2>
           <p>
@@ -27,7 +27,7 @@ export default function Sejarah() {
             Dengan gaya arsitektur Neoklasik Eropa yang kental, gedung ini menjadi saksi bisu berbagai peristiwa penting di Makassar. Setelah kemerdekaan, fungsinya tetap sebagai kantor Walikota hingga tahun 1999. Menyadari nilai historisnya yang tinggi, Pemerintah Kota kemudian merevitalisasi gedung ini. Tepat pada tanggal 14 Mei 2000, gedung ini diresmikan sebagai Museum Kota Makassar untuk melestarikan dan memamerkan sejarah serta budaya kota.
           </p>
         </div>
-        <div className="sejarah-facts">
+        <aside className="sejarah-facts">
             <h3>Fakta Singkat</h3>
             <ul>
                 <li><FaLandmark /> <strong>Fungsi Awal:</strong> Stadhuis (Balai Kota)</li>
@@ -35,10 +35,10 @@ export default function Sejarah() {
                 <li><FaRegCalendarAlt /> <strong>Dibangun:</strong> 1916</li>
                 <li><strong>Gaya:</strong> Neoklasik Eropa</li>
             </ul>
-        </div>
-      </div>
+        </aside>
+      </section>
 
-      <div className="timeline-container">
+      <section className="timeline-container">
         <h2>Linimasa Penting</h2>
         <ul className="timeline">
           <li>
@@ -66,9 +66,9 @@ export default function Sejarah() {
             </div>
           </li>
         </ul>
-      </div>
+      </section>
 
-       <div className="gallery-container">
+      <section className="gallery-container">
         <h2>Galeri Sejarah</h2>
         <div className="gallery-grid">
             <figure>
@@ -84,7 +84,7 @@ export default function Sejarah() {
                 <figcaption>Detail arsitektur Neoklasik</figcaption>
             </figure>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

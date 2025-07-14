@@ -1,6 +1,8 @@
-.info-page {
+/* Menggunakan class .container dari file CSS global/Home.css untuk konsistensi */
+.info-page.container {
   padding-top: 40px;
   padding-bottom: 60px;
+  max-width: 1200px;
 }
 
 .info-header {
@@ -9,7 +11,8 @@
 }
 
 .info-header h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
+  font-weight: 700;
   color: #333;
   margin-bottom: 10px;
 }
@@ -17,12 +20,14 @@
 .info-header p {
   font-size: 1.1rem;
   color: #666;
+  line-height: 1.6;
 }
 
 .info-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr; /* Kolom peta sedikit lebih besar */
   gap: 3rem;
+  align-items: flex-start;
 }
 
 .info-map h3,
@@ -31,19 +36,19 @@
   align-items: center;
   gap: 10px;
   font-size: 1.6rem;
-  color: #8B4513; /* Coklat */
+  color: #8B4513; /* SaddleBrown */
   margin-bottom: 1rem;
 }
 
 .info-map p {
   font-size: 1rem;
   color: #555;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 1.5rem;
 }
 
 .map-container {
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   line-height: 0; /* Menghilangkan spasi bawah iframe */
@@ -58,46 +63,83 @@
 .info-card {
   background-color: #ffffff;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .info-card ul {
   list-style: none;
   padding-left: 0;
-  margin-top: 1rem;
+  margin: 1rem 0 0 0;
 }
 
 .info-card ul li {
   font-size: 1rem;
   color: #333;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
   line-height: 1.5;
 }
 
+.info-card li:last-child {
+  margin-bottom: 0;
+}
+
 .info-card li.closed {
-    color: #c0392b; /* Merah */
-    font-weight: 600;
+  color: #c0392b; /* Merah */
+}
+
+.info-card li.closed strong {
+  color: #c0392b;
 }
 
 .rules-list li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: flex-start; /* Ganti ke flex-start agar ikon sejajar dengan baris pertama teks panjang */
+  gap: 12px;
+}
+
+/* Pemisah visual antara fasilitas dan aturan */
+.rules-list li.separator {
+  display: block;
+  height: 12px;
+  margin-bottom: 12px;
 }
 
 .icon-check {
-    color: #27ae60; /* Hijau */
+  color: #27ae60; /* Hijau */
+  margin-top: 4px; /* Menyesuaikan posisi ikon */
 }
 
 .icon-cross {
-    color: #c0392b; /* Merah */
+  color: #c0392b; /* Merah */
+  margin-top: 4px; /* Menyesuaikan posisi ikon */
 }
 
 
-/* Responsif untuk layar kecil */
-@media (max-width: 992px) {
+/* === Media Queries untuk Responsivitas === */
+@media screen and (max-width: 992px) {
   .info-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Tata letak jadi 1 kolom */
+    gap: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info-page.container {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .info-header h1 {
+    font-size: 2.1rem;
+  }
+  .info-header p {
+    font-size: 1rem;
+  }
+  .info-map h3,
+  .info-details h3 {
+    font-size: 1.4rem;
+  }
+  .info-card {
+    padding: 1.5rem;
   }
 }
