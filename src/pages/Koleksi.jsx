@@ -8,7 +8,7 @@ import imgEtnografi from "../assets/koleksi/sepeda.jpg";
 import imgMeriam from "../assets/koleksi/bola-meriam.jpg";
 import imgPameran from "../assets/koleksi/pameran.jpg";
 import imgBadik from "../assets/koleksi/badik.jpg";
-import imgKeramik from "../assets/koleksi/keramik.JPG";
+import imgKeramik from "../assets/koleksi/keramik.jpg";
 
 
 export default function Koleksi() {
